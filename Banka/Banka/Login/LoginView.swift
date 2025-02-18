@@ -42,6 +42,7 @@ extension LoginView {
         stackview.spacing = 8
         
         usernameTextField.translatesAutoresizingMaskIntoConstraints = false
+        usernameTextField.delegate = self
         usernameTextField.placeholder = "Usuario"
         
         
@@ -49,6 +50,7 @@ extension LoginView {
         divider.backgroundColor = .secondarySystemFill
         
         passwordTextField.translatesAutoresizingMaskIntoConstraints = false
+        passwordTextField.delegate = self
         passwordTextField.placeholder = "Contraseña"
         passwordTextField.isSecureTextEntry = true
         
@@ -68,10 +70,18 @@ extension LoginView {
             bottomAnchor.constraint(equalToSystemSpacingBelow: stackview.bottomAnchor, multiplier: 1),
             divider.heightAnchor.constraint(equalToConstant: 1)
         ])
-        
-        
-        
-        
+    }
+}
+
+extension LoginView: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        usernameTextField.endEditing(true)
+        passwordTextField.endEditing(true)
+        return true
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        return true
     }
 }
 

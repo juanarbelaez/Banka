@@ -6,9 +6,12 @@
 //
 
 import Foundation
-
-
 import UIKit
+
+protocol LoginViewControllerDelegate: AnyObject {
+    func didLogin()
+}
+
 
 class LoginViewController: UIViewController {
     
@@ -18,6 +21,15 @@ class LoginViewController: UIViewController {
     let signInButton = UIButton()
     let errorLabel = UILabel()
     let resetPasswordButton = UIButton()
+    
+    weak var delegate: LoginViewControllerDelegate?
+    
+    var username: String? {
+        return loginView.usernameTextField.text
+    }
+    var password: String? {
+        return loginView.passwordTextField.text
+    }
     
     
     override func viewDidLoad(){
@@ -58,7 +70,7 @@ extension LoginViewController {
         
         errorLabel.translatesAutoresizingMaskIntoConstraints = false
         errorLabel.textColor = .systemRed
-        errorLabel.text = "Error"
+        errorLabel.numberOfLines = 0
         errorLabel.isHidden = true
         errorLabel.textAlignment = .center
     }
@@ -75,8 +87,8 @@ extension LoginViewController {
         
         // Login Constraints
         NSLayoutConstraint.activate([
-            loginView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
-            view.trailingAnchor.constraint(equalToSystemSpacingAfter: loginView.trailingAnchor, multiplier: 1),
+            loginView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 2),
+            view.trailingAnchor.constraint(equalToSystemSpacingAfter: loginView.trailingAnchor, multiplier: 2),
             loginView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
         
@@ -90,45 +102,66 @@ extension LoginViewController {
         // Signin Constraints
         NSLayoutConstraint.activate([
             signInButton.topAnchor.constraint(equalToSystemSpacingBelow: resetPasswordButton.bottomAnchor, multiplier: 1),
-            signInButton.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
-            view.trailingAnchor.constraint(equalToSystemSpacingAfter: signInButton.trailingAnchor, multiplier: 1),
+            signInButton.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 2),
+            view.trailingAnchor.constraint(equalToSystemSpacingAfter: signInButton.trailingAnchor, multiplier: 2),
         ])
         
         // ErrorLabel Constraint
         NSLayoutConstraint.activate([
             errorLabel.topAnchor.constraint(equalToSystemSpacingBelow: signInButton.bottomAnchor, multiplier: 1),
-            errorLabel.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
-            view.trailingAnchor.constraint(equalToSystemSpacingAfter: errorLabel.trailingAnchor, multiplier: 1)
+            errorLabel.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 2),
+            view.trailingAnchor.constraint(equalToSystemSpacingAfter: errorLabel.trailingAnchor, multiplier: 2)
         ])
         
         // Title Constraint
         NSLayoutConstraint.activate([
             titleLabel.bottomAnchor.constraint(equalTo: subtitleLabel.topAnchor, constant: -4),
-            titleLabel.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 2),
-            view.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: 2)
+            titleLabel.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 4),
+            view.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: 4)
         ])
         
         //Subtitle Constraint
         NSLayoutConstraint.activate([
             subtitleLabel.bottomAnchor.constraint(equalTo: loginView.topAnchor, constant: -16),
-            subtitleLabel.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 2),
-            view.trailingAnchor.constraint(equalTo: subtitleLabel.trailingAnchor, constant: 2)
+            subtitleLabel.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 4),
+            view.trailingAnchor.constraint(equalTo: subtitleLabel.trailingAnchor, constant: 4)
         ])
     }
 }
 
-// MARK: - Actions
 
 extension LoginViewController {
     @objc func signinTapped(sender: UIButton) {
-        // Logica Inicio de sesión
+        errorLabel.isHidden = true
+        login()
     }
     
     @objc func resetPasswordTapped(sender: UIButton) {
         // Logica Olvidó la contraseña
     }
     
-
+    private func login() {
+        guard let username = username, let password = password else {
+            assertionFailure("Usuario ó contraseña no deben ser nulos")
+            return
+        }
+        
+        if username.isEmpty || password.isEmpty {
+            configureView(withMessage: "Usuario ó contraseña no pueden ser vacíos")
+            return
+        }
+        
+        if username == "Juan" && password == "1234" {
+            errorLabel.isHidden = true
+            delegate?.didLogin()
+        } else {
+            configureView(withMessage: "Usuario ó contraseña incorrectos")
+        }
+    }
     
+    private func configureView(withMessage message: String) {
+        errorLabel.isHidden = false
+        errorLabel.text = message
+    }
 }
 

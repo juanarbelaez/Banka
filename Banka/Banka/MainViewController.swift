@@ -8,7 +8,7 @@
 import UIKit
 
 class MainViewController: UITabBarController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
@@ -48,12 +48,14 @@ class MainViewController: UITabBarController {
         tabBar.tintColor = appColor
         tabBar.isTranslucent = false
     }
+    
 }
 
 
-class ResumenViewController: UIViewController {
-    override func viewDidLoad() {
-        view.backgroundColor = .lightGray
+// MARK: - Actions
+extension MainViewController {
+    @objc func logoutTapped(sender: UIButton) {
+        
     }
 }
 

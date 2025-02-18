@@ -14,6 +14,8 @@
 		D8FAB1D12D63995C006C1573 /* UIViewControllers+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FAB1D02D63995C006C1573 /* UIViewControllers+Utils.swift */; };
 		D8FAB1D32D63C6B3006C1573 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FAB1D22D63C6B3006C1573 /* LoginViewController.swift */; };
 		D8FAB1D62D63C9D9006C1573 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FAB1D52D63C9D9006C1573 /* LoginView.swift */; };
+		D8FAB1D92D642995006C1573 /* ResumenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FAB1D82D642995006C1573 /* ResumenViewController.swift */; };
+		D8FAB1DC2D642DB7006C1573 /* ResumenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FAB1DB2D642DB7006C1573 /* ResumenCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		D8FAB1D02D63995C006C1573 /* UIViewControllers+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewControllers+Utils.swift"; sourceTree = "<group>"; };
 		D8FAB1D22D63C6B3006C1573 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D8FAB1D52D63C9D9006C1573 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		D8FAB1D82D642995006C1573 /* ResumenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumenViewController.swift; sourceTree = "<group>"; };
+		D8FAB1DB2D642DB7006C1573 /* ResumenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumenCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,7 @@
 				D8FAB1BB2D638CF2006C1573 /* AppDelegate.swift */,
 				D8FAB1BF2D638CF2006C1573 /* MainViewController.swift */,
 				D8FAB1D42D63C7EC006C1573 /* Login */,
+				D8FAB1D72D642917006C1573 /* Resumen */,
 				D8FAB1CF2D639932006C1573 /* Utils */,
 				D8FAB1C42D638CF3006C1573 /* Assets.xcassets */,
 				D8FAB1C62D638CF3006C1573 /* LaunchScreen.storyboard */,
@@ -84,6 +89,23 @@
 				D8FAB1D52D63C9D9006C1573 /* LoginView.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		D8FAB1D72D642917006C1573 /* Resumen */ = {
+			isa = PBXGroup;
+			children = (
+				D8FAB1DA2D642D97006C1573 /* Cell */,
+				D8FAB1D82D642995006C1573 /* ResumenViewController.swift */,
+			);
+			path = Resumen;
+			sourceTree = "<group>";
+		};
+		D8FAB1DA2D642D97006C1573 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D8FAB1DB2D642DB7006C1573 /* ResumenCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,10 +178,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8FAB1DC2D642DB7006C1573 /* ResumenCell.swift in Sources */,
 				D8FAB1D32D63C6B3006C1573 /* LoginViewController.swift in Sources */,
 				D8FAB1D12D63995C006C1573 /* UIViewControllers+Utils.swift in Sources */,
 				D8FAB1C02D638CF2006C1573 /* MainViewController.swift in Sources */,
 				D8FAB1D62D63C9D9006C1573 /* LoginView.swift in Sources */,
+				D8FAB1D92D642995006C1573 /* ResumenViewController.swift in Sources */,
 				D8FAB1BC2D638CF2006C1573 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
