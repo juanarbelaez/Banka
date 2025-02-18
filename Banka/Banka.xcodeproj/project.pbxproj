@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D85B46122D64DC78006FB269 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85B46112D64DC78006FB269 /* HeaderView.swift */; };
 		D8FAB1BC2D638CF2006C1573 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FAB1BB2D638CF2006C1573 /* AppDelegate.swift */; };
 		D8FAB1C02D638CF2006C1573 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FAB1BF2D638CF2006C1573 /* MainViewController.swift */; };
 		D8FAB1C52D638CF3006C1573 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8FAB1C42D638CF3006C1573 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D85B46112D64DC78006FB269 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		D8FAB1B82D638CF2006C1573 /* Banka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Banka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8FAB1BB2D638CF2006C1573 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8FAB1BF2D638CF2006C1573 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D85B46102D64DC3F006FB269 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				D85B46112D64DC78006FB269 /* HeaderView.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
 		D8FAB1AF2D638CF2006C1573 = {
 			isa = PBXGroup;
 			children = (
@@ -94,8 +104,9 @@
 		D8FAB1D72D642917006C1573 /* Resumen */ = {
 			isa = PBXGroup;
 			children = (
-				D8FAB1DA2D642D97006C1573 /* Cell */,
 				D8FAB1D82D642995006C1573 /* ResumenViewController.swift */,
+				D85B46102D64DC3F006FB269 /* Header */,
+				D8FAB1DA2D642D97006C1573 /* Cell */,
 			);
 			path = Resumen;
 			sourceTree = "<group>";
@@ -185,6 +196,7 @@
 				D8FAB1D62D63C9D9006C1573 /* LoginView.swift in Sources */,
 				D8FAB1D92D642995006C1573 /* ResumenViewController.swift in Sources */,
 				D8FAB1BC2D638CF2006C1573 /* AppDelegate.swift in Sources */,
+				D85B46122D64DC78006FB269 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

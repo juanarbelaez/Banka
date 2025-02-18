@@ -59,7 +59,6 @@ extension LoginViewController {
         resetPasswordButton.setTitle("Olvidó la contraseña?", for: [])
         resetPasswordButton.titleLabel?.font = UIFont.systemFont(ofSize: 3)
         resetPasswordButton.configuration?.buttonSize = .mini
-        
         resetPasswordButton.addTarget(self, action: #selector(resetPasswordTapped), for: .primaryActionTriggered)
         
         signInButton.translatesAutoresizingMaskIntoConstraints = false
@@ -138,6 +137,7 @@ extension LoginViewController {
     
     @objc func resetPasswordTapped(sender: UIButton) {
         // Logica Olvidó la contraseña
+        print("reset password")
     }
     
     private func login() {

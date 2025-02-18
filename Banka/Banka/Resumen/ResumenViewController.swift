@@ -21,7 +21,7 @@ class ResumenViewController: UIViewController {
         barButtonItem.tintColor = .label
         return barButtonItem
     }()
-    
+    let headerView = HeaderView(frame: .zero)
     var tableView = UITableView()
     
     override func viewDidLoad(){
@@ -36,6 +36,7 @@ extension ResumenViewController {
     private func setup() {
         
         setupNavigationBar()
+        setupHeaderView()
         setupTableView()
     }
     
@@ -62,6 +63,14 @@ extension ResumenViewController {
     private func setupNavigationBar() {
         
         navigationItem.rightBarButtonItem = logoutBarButtonItem
+    }
+    
+    private func setupHeaderView() {
+        var size = headerView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
+        size.width = UIScreen.main.bounds.width
+        headerView.frame.size = size
+        
+        tableView.tableHeaderView = headerView
     }
 }
 
