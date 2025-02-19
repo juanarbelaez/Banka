@@ -16,13 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let loginViewController = LoginViewController()
     let mainViewController = MainViewController()
+    let detalleProductoViewController = DetalleProductoViewController()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         window?.backgroundColor = .systemBackground
         loginViewController.delegate = self
-        window?.rootViewController = mainViewController
+        window?.rootViewController = loginViewController
         
         return true
     }

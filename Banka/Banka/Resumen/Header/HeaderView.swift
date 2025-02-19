@@ -15,6 +15,8 @@ class HeaderView: UIView {
     let usuarioLabel = UILabel()
     let logoImage = UIImageView()
     let stackView = UIStackView()
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -39,19 +41,19 @@ extension HeaderView {
         
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.text = "Banka"
-        titleLabel.font = UIFont.boldSystemFont(ofSize: 40)
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 38)
         titleLabel.textAlignment = .left
        
         holaLabel.translatesAutoresizingMaskIntoConstraints = false
         holaLabel.text = "Hola, "
         holaLabel.textAlignment = .left
-        holaLabel.font = UIFont.systemFont(ofSize: 24)
+        holaLabel.font = UIFont.systemFont(ofSize: 20)
         
      
         usuarioLabel.translatesAutoresizingMaskIntoConstraints = false
         usuarioLabel.text = "Juan Arbeláez"
         usuarioLabel.textAlignment = .left
-        usuarioLabel.font = UIFont.boldSystemFont(ofSize: 24)
+        usuarioLabel.font = UIFont.boldSystemFont(ofSize: 18)
 
         
         logoImage.translatesAutoresizingMaskIntoConstraints = false

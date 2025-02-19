@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D84F09B42D652B83006A77BA /* HeaderViewProducto.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84F09B32D652B83006A77BA /* HeaderViewProducto.swift */; };
+		D84F09B62D652BFE006A77BA /* MovimientoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84F09B52D652BFE006A77BA /* MovimientoCell.swift */; };
 		D85B46122D64DC78006FB269 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85B46112D64DC78006FB269 /* HeaderView.swift */; };
+		D85B46162D652715006FB269 /* DetalleProductoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85B46152D652715006FB269 /* DetalleProductoViewController.swift */; };
 		D8FAB1BC2D638CF2006C1573 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FAB1BB2D638CF2006C1573 /* AppDelegate.swift */; };
 		D8FAB1C02D638CF2006C1573 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FAB1BF2D638CF2006C1573 /* MainViewController.swift */; };
 		D8FAB1C52D638CF3006C1573 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8FAB1C42D638CF3006C1573 /* Assets.xcassets */; };
@@ -20,7 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D84F09B32D652B83006A77BA /* HeaderViewProducto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewProducto.swift; sourceTree = "<group>"; };
+		D84F09B52D652BFE006A77BA /* MovimientoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovimientoCell.swift; sourceTree = "<group>"; };
 		D85B46112D64DC78006FB269 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		D85B46152D652715006FB269 /* DetalleProductoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleProductoViewController.swift; sourceTree = "<group>"; };
 		D8FAB1B82D638CF2006C1573 /* Banka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Banka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8FAB1BB2D638CF2006C1573 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8FAB1BF2D638CF2006C1573 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -45,12 +51,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D84F09B12D652B42006A77BA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D84F09B52D652BFE006A77BA /* MovimientoCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		D84F09B22D652B53006A77BA /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				D84F09B32D652B83006A77BA /* HeaderViewProducto.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
 		D85B46102D64DC3F006FB269 /* Header */ = {
 			isa = PBXGroup;
 			children = (
 				D85B46112D64DC78006FB269 /* HeaderView.swift */,
 			);
 			path = Header;
+			sourceTree = "<group>";
+		};
+		D85B46132D6526C3006FB269 /* DetalleProducto */ = {
+			isa = PBXGroup;
+			children = (
+				D85B46152D652715006FB269 /* DetalleProductoViewController.swift */,
+				D84F09B22D652B53006A77BA /* Header */,
+				D84F09B12D652B42006A77BA /* Cell */,
+			);
+			path = DetalleProducto;
 			sourceTree = "<group>";
 		};
 		D8FAB1AF2D638CF2006C1573 = {
@@ -76,6 +108,7 @@
 				D8FAB1BF2D638CF2006C1573 /* MainViewController.swift */,
 				D8FAB1D42D63C7EC006C1573 /* Login */,
 				D8FAB1D72D642917006C1573 /* Resumen */,
+				D85B46132D6526C3006FB269 /* DetalleProducto */,
 				D8FAB1CF2D639932006C1573 /* Utils */,
 				D8FAB1C42D638CF3006C1573 /* Assets.xcassets */,
 				D8FAB1C62D638CF3006C1573 /* LaunchScreen.storyboard */,
@@ -189,10 +222,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D85B46162D652715006FB269 /* DetalleProductoViewController.swift in Sources */,
 				D8FAB1DC2D642DB7006C1573 /* ResumenCell.swift in Sources */,
 				D8FAB1D32D63C6B3006C1573 /* LoginViewController.swift in Sources */,
 				D8FAB1D12D63995C006C1573 /* UIViewControllers+Utils.swift in Sources */,
 				D8FAB1C02D638CF2006C1573 /* MainViewController.swift in Sources */,
+				D84F09B42D652B83006A77BA /* HeaderViewProducto.swift in Sources */,
+				D84F09B62D652BFE006A77BA /* MovimientoCell.swift in Sources */,
 				D8FAB1D62D63C9D9006C1573 /* LoginView.swift in Sources */,
 				D8FAB1D92D642995006C1573 /* ResumenViewController.swift in Sources */,
 				D8FAB1BC2D638CF2006C1573 /* AppDelegate.swift in Sources */,

@@ -1,29 +1,19 @@
 //
-//  ResumenViewController.swift
+//  DetalleProductoViewController.swift
 //  Banka
 //
-//  Created by Juan Arbelaez on 17/02/25.
+//  Created by Juan Arbelaez on 18/02/25.
 //
 
 import Foundation
-
 import UIKit
 
-class ResumenViewController: UIViewController {
+class DetalleProductoViewController: UIViewController {
     
-    let games = ["Pacman",
-                 "Space Invaders",
-                 "Space Patrol",
-    ]
     
-    lazy var logoutBarButtonItem: UIBarButtonItem = {
-        let barButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(logoutTapped))
-        barButtonItem.tintColor = .label
-        return barButtonItem
-    }()
-    
-    let headerView = HeaderView(frame: .zero)
     var tableView = UITableView()
+    let headerView = HeaderViewProducto()
+    
     
     override func viewDidLoad(){
         super.viewDidLoad()
@@ -32,25 +22,21 @@ class ResumenViewController: UIViewController {
     }
 }
 
-extension ResumenViewController {
+extension DetalleProductoViewController {
     
     private func setup() {
-        
-        setupNavigationBar()
-        setupHeaderView()
         setupTableView()
+        setupHeaderView()
     }
     
     private func setupTableView(){
-        tableView.backgroundColor = appColor
         tableView.delegate = self
         tableView.dataSource = self
         
-        tableView.register(ResumenCell.self, forCellReuseIdentifier: ResumenCell.reuseId)
-        tableView.tableFooterView = UIView()
-        tableView.rowHeight = ResumenCell.rowHeight
-        
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.register(MovimientoCell.self, forCellReuseIdentifier: MovimientoCell.reuseId)
+        tableView.rowHeight = MovimientoCell.rowHeight
+        
         view.addSubview(tableView)
         
         NSLayoutConstraint.activate([
@@ -59,11 +45,6 @@ extension ResumenViewController {
             tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
-    }
-    
-    private func setupNavigationBar() {
-        
-        navigationItem.rightBarButtonItem = logoutBarButtonItem
     }
     
     private func setupHeaderView() {
@@ -75,28 +56,21 @@ extension ResumenViewController {
     }
 }
 
-extension ResumenViewController: UITableViewDelegate {
+extension DetalleProductoViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        navigationController?.pushViewController(DetalleProductoViewController(), animated: true)
+        
     }
 }
 
-extension ResumenViewController: UITableViewDataSource {
+extension DetalleProductoViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 15
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: ResumenCell.reuseId, for: indexPath) as! ResumenCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: MovimientoCell.reuseId, for: indexPath) as! MovimientoCell
         return cell
     }
     
     
-}
-
-//MARK: - Actions
-extension ResumenViewController {
-    @objc func logoutTapped(sender: UIButton) {
-        // TODO: Cierre sesión
-    }
 }
