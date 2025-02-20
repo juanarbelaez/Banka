@@ -59,11 +59,6 @@ extension MainViewController {
     }
 }
 
-class TransferViewController: UIViewController {
-    override func viewDidLoad() {
-        view.backgroundColor = .systemMint
-    }
-}
 
 class MasViewController: UIViewController {
     override func viewDidLoad() {

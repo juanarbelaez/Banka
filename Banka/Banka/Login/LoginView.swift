@@ -44,6 +44,7 @@ extension LoginView {
         usernameTextField.translatesAutoresizingMaskIntoConstraints = false
         usernameTextField.delegate = self
         usernameTextField.placeholder = "Usuario"
+        usernameTextField.autocorrectionType = .no
         
         
         divider.translatesAutoresizingMaskIntoConstraints = false
@@ -53,6 +54,7 @@ extension LoginView {
         passwordTextField.delegate = self
         passwordTextField.placeholder = "Contraseña"
         passwordTextField.isSecureTextEntry = true
+        passwordTextField.autocorrectionType = .no
         
     }
     

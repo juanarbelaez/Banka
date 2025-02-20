@@ -33,7 +33,7 @@ class HeaderViewProducto: UIView {
 
     
     override var intrinsicContentSize: CGSize{
-        return CGSize(width: UIView.noIntrinsicMetric, height: 112)
+        return CGSize(width: UIView.noIntrinsicMetric, height: 96)
     }
 }
 
@@ -82,7 +82,7 @@ extension HeaderViewProducto {
         
         
         NSLayoutConstraint.activate([
-            tipoProducto.topAnchor.constraint(equalToSystemSpacingBelow: topAnchor, multiplier: 2),
+            tipoProducto.topAnchor.constraint(equalToSystemSpacingBelow: topAnchor, multiplier: 3),
             tipoProducto.leadingAnchor.constraint(equalToSystemSpacingAfter: leadingAnchor, multiplier: 2),
             divider.topAnchor.constraint(equalToSystemSpacingBelow: tipoProducto.bottomAnchor, multiplier: 0),
             divider.leadingAnchor.constraint(equalToSystemSpacingAfter: leadingAnchor, multiplier: 2),
@@ -90,9 +90,9 @@ extension HeaderViewProducto {
             divider.heightAnchor.constraint(equalToConstant: 4),
             numeroProducto.topAnchor.constraint(equalToSystemSpacingBelow: divider.bottomAnchor, multiplier: 1),
             numeroProducto.leadingAnchor.constraint(equalToSystemSpacingAfter: leadingAnchor, multiplier: 2),
-            bottomAnchor.constraint(equalToSystemSpacingBelow: balanceStackView.bottomAnchor, multiplier: 4),
+            bottomAnchor.constraint(equalToSystemSpacingBelow: balanceStackView.bottomAnchor, multiplier: 1),
             balanceStackView.leadingAnchor.constraint(equalToSystemSpacingAfter: leadingAnchor, multiplier: 32)
-           
+
         ])
     }
 }

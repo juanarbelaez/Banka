@@ -36,6 +36,8 @@ extension DetalleProductoViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(MovimientoCell.self, forCellReuseIdentifier: MovimientoCell.reuseId)
         tableView.rowHeight = MovimientoCell.rowHeight
+        tableView.allowsSelection = false
+        
         
         view.addSubview(tableView)
         
@@ -58,7 +60,7 @@ extension DetalleProductoViewController {
 
 extension DetalleProductoViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+
     }
 }
 
@@ -71,6 +73,19 @@ extension DetalleProductoViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: MovimientoCell.reuseId, for: indexPath) as! MovimientoCell
         return cell
     }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section != 0 {
+            return ""
+        }
+       
+        return "Movimientos"
+    }
+    
     
     
 }
