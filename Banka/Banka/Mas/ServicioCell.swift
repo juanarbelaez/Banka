@@ -35,9 +35,9 @@ extension ServicioCell {
     private func setup() {
 
         imageViewCell.translatesAutoresizingMaskIntoConstraints = false
-        imageViewCell.layer.cornerRadius = 5
+        imageViewCell.layer.cornerRadius = 25
         imageViewCell.clipsToBounds = true
-//        imageViewCell.backgroundColor = appColor
+        imageViewCell.backgroundColor = appColor
     
         
         servicioLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -66,9 +66,11 @@ extension ServicioCell {
     
     func configureCell(imageName: String, servicio: String) {
         
-        if let image = UIImage(systemName: imageName)?.withTintColor(.black, renderingMode: .alwaysOriginal) {
+        if let image = UIImage(systemName: imageName)?.withTintColor(.black, renderingMode: .alwaysOriginal){
+            image.withAlignmentRectInsets(UIEdgeInsets(top: -1, left: -1, bottom: -1, right: -1))
+            imageViewCell.contentMode = .center
             imageViewCell.image = image
-            imageViewCell.contentMode = .scaleAspectFit
+//
         } else {
             print("ErrorImage")
         }

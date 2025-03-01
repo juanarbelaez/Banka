@@ -31,7 +31,7 @@ class MasViewController: UIViewController {
         return collectionView
     }()
     
-    let servicios = [Servicio(ImageName: "person", nombreServicio: "Tu usuario"),Servicio(ImageName: "lock", nombreServicio: "Bloqueos"),Servicio(ImageName: "checkmark.shield", nombreServicio: "Seguridad"),Servicio(ImageName: "creditcard", nombreServicio: "Tarjetas"), Servicio(ImageName: "envelope", nombreServicio: "Mensajes"),Servicio(ImageName: "location.square", nombreServicio: "Visítanos")]
+    let servicios = [Servicio(ImageName: "person", nombreServicio: "Tu usuario"),Servicio(ImageName: "lock", nombreServicio: "Bloqueos"),Servicio(ImageName: "checkmark.shield", nombreServicio: "Seguridad"),Servicio(ImageName: "creditcard", nombreServicio: "Tarjetas"), Servicio(ImageName: "envelope", nombreServicio: "Mensajes"),Servicio(ImageName: "mappin.and.ellipse", nombreServicio: "Visítanos")]
     
     
     override func viewDidLoad(){
