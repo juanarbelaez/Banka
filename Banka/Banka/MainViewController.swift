@@ -45,7 +45,7 @@ class MainViewController: UITabBarController {
     
     
     private func setupTabBar() {
-        tabBar.tintColor = appColor
+        tabBar.tintColor = .black
         tabBar.isTranslucent = false
     }
     
@@ -60,8 +60,3 @@ extension MainViewController {
 }
 
 
-class MasViewController: UIViewController {
-    override func viewDidLoad() {
-        view.backgroundColor = .systemPurple
-    }
-}

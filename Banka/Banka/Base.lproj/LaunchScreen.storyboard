@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bank-credit" translatesAutoresizingMaskIntoConstraints="NO" id="TmQ-Ka-Hbb">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="creditcard.circle" translatesAutoresizingMaskIntoConstraints="NO" id="TmQ-Ka-Hbb">
                                 <rect key="frame" x="76.666666666666686" y="374.66666666666669" width="240" height="128"/>
                                 <color key="tintColor" name="AppColor"/>
                                 <constraints>
@@ -41,9 +41,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bank-credit" width="512" height="512"/>
+        <image name="creditcard.circle" width="385" height="382"/>
         <namedColor name="AppColor">
-            <color red="0.71471060668208375" green="0.59743497041939264" blue="0.86978858714877694" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.36096502241343636" green="0.38019632485882643" blue="0.39527894115120277" alpha="0.16" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let mainViewController = MainViewController()
     let detalleProductoViewController = DetalleProductoViewController()
     let transferViewController = TransferViewController()
+    let masViewController = MasViewController()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)

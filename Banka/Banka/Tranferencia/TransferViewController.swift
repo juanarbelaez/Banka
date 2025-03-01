@@ -10,6 +10,8 @@ import UIKit
 
 class TransferViewController: UIViewController {
     
+    let titleLabel = UILabel()
+    
     let stackView = UIStackView()
     let productoOrigen = ProductoTransferView(title: "Producto origen")
     let montoTransfer = MontoTransferView()
@@ -30,6 +32,11 @@ class TransferViewController: UIViewController {
 
 extension TransferViewController {
     func style(){
+        
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.text = "Transferencia"
+        titleLabel.textAlignment = .center
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 32)
         
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
@@ -55,6 +62,7 @@ extension TransferViewController {
     }
     func layout(){
         
+        stackView.addArrangedSubview(titleLabel)
         stackView.addArrangedSubview(productoOrigen)
         stackView.addArrangedSubview(montoTransfer)
         stackView.addArrangedSubview(productoDestinoView)

@@ -14,6 +14,8 @@
 		D8845DCE2D66250A001966BA /* TransferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8845DCD2D66250A001966BA /* TransferViewController.swift */; };
 		D8845DD02D66298D001966BA /* ProductoTransferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8845DCF2D66298D001966BA /* ProductoTransferView.swift */; };
 		D88617BA2D67C4FA009AF098 /* MontoTransferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88617B92D67C4FA009AF098 /* MontoTransferView.swift */; };
+		D88617BD2D68CBF3009AF098 /* MasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88617BC2D68CBF3009AF098 /* MasViewController.swift */; };
+		D88617BF2D694CC0009AF098 /* ServicioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88617BE2D694CC0009AF098 /* ServicioCell.swift */; };
 		D8FAB1BC2D638CF2006C1573 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FAB1BB2D638CF2006C1573 /* AppDelegate.swift */; };
 		D8FAB1C02D638CF2006C1573 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FAB1BF2D638CF2006C1573 /* MainViewController.swift */; };
 		D8FAB1C52D638CF3006C1573 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8FAB1C42D638CF3006C1573 /* Assets.xcassets */; };
@@ -33,6 +35,8 @@
 		D8845DCD2D66250A001966BA /* TransferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferViewController.swift; sourceTree = "<group>"; };
 		D8845DCF2D66298D001966BA /* ProductoTransferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductoTransferView.swift; sourceTree = "<group>"; };
 		D88617B92D67C4FA009AF098 /* MontoTransferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MontoTransferView.swift; sourceTree = "<group>"; };
+		D88617BC2D68CBF3009AF098 /* MasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasViewController.swift; sourceTree = "<group>"; };
+		D88617BE2D694CC0009AF098 /* ServicioCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicioCell.swift; sourceTree = "<group>"; };
 		D8FAB1B82D638CF2006C1573 /* Banka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Banka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8FAB1BB2D638CF2006C1573 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8FAB1BF2D638CF2006C1573 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +105,15 @@
 			path = Tranferencia;
 			sourceTree = "<group>";
 		};
+		D88617BB2D68CBA0009AF098 /* Mas */ = {
+			isa = PBXGroup;
+			children = (
+				D88617BC2D68CBF3009AF098 /* MasViewController.swift */,
+				D88617BE2D694CC0009AF098 /* ServicioCell.swift */,
+			);
+			path = Mas;
+			sourceTree = "<group>";
+		};
 		D8FAB1AF2D638CF2006C1573 = {
 			isa = PBXGroup;
 			children = (
@@ -124,8 +137,8 @@
 				D8FAB1BF2D638CF2006C1573 /* MainViewController.swift */,
 				D8FAB1D42D63C7EC006C1573 /* Login */,
 				D8FAB1D72D642917006C1573 /* Resumen */,
-				D85B46132D6526C3006FB269 /* DetalleProducto */,
 				D8845DCC2D6624D2001966BA /* Tranferencia */,
+				D88617BB2D68CBA0009AF098 /* Mas */,
 				D8FAB1CF2D639932006C1573 /* Utils */,
 				D8FAB1C42D638CF3006C1573 /* Assets.xcassets */,
 				D8FAB1C62D638CF3006C1573 /* LaunchScreen.storyboard */,
@@ -157,6 +170,7 @@
 				D8FAB1D82D642995006C1573 /* ResumenViewController.swift */,
 				D85B46102D64DC3F006FB269 /* Header */,
 				D8FAB1DA2D642D97006C1573 /* Cell */,
+				D85B46132D6526C3006FB269 /* DetalleProducto */,
 			);
 			path = Resumen;
 			sourceTree = "<group>";
@@ -240,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8845DCE2D66250A001966BA /* TransferViewController.swift in Sources */,
+				D88617BF2D694CC0009AF098 /* ServicioCell.swift in Sources */,
 				D88617BA2D67C4FA009AF098 /* MontoTransferView.swift in Sources */,
 				D85B46162D652715006FB269 /* DetalleProductoViewController.swift in Sources */,
 				D8FAB1DC2D642DB7006C1573 /* ResumenCell.swift in Sources */,
@@ -249,6 +264,7 @@
 				D84F09B42D652B83006A77BA /* HeaderViewProducto.swift in Sources */,
 				D84F09B62D652BFE006A77BA /* MovimientoCell.swift in Sources */,
 				D8FAB1D62D63C9D9006C1573 /* LoginView.swift in Sources */,
+				D88617BD2D68CBF3009AF098 /* MasViewController.swift in Sources */,
 				D8845DD02D66298D001966BA /* ProductoTransferView.swift in Sources */,
 				D8FAB1D92D642995006C1573 /* ResumenViewController.swift in Sources */,
 				D8FAB1BC2D638CF2006C1573 /* AppDelegate.swift in Sources */,

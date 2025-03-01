@@ -55,7 +55,7 @@ extension ProductoTransferView {
         
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.text = titleText
-        titleLabel.font = UIFont.boldSystemFont(ofSize: 24)
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 20)
         titleLabel.textAlignment = .left
         
         nombreCuenta.translatesAutoresizingMaskIntoConstraints = false

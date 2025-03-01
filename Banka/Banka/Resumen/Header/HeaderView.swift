@@ -57,7 +57,7 @@ extension HeaderView {
 
         
         logoImage.translatesAutoresizingMaskIntoConstraints = false
-        logoImage.image = UIImage(named: "bank-credit")?.withTintColor(.black, renderingMode: .alwaysOriginal)
+        logoImage.image = UIImage(named: "creditcard.circle")?.withTintColor(.black, renderingMode: .alwaysOriginal)
         
         
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -80,8 +80,8 @@ extension HeaderView {
             stackView.topAnchor.constraint(equalToSystemSpacingBelow: topAnchor, multiplier: 2),
             stackView.leadingAnchor.constraint(equalToSystemSpacingAfter: leadingAnchor, multiplier: 2),
             logoImage.centerYAnchor.constraint(equalTo: centerYAnchor),
-            logoImage.leadingAnchor.constraint(equalToSystemSpacingAfter: leadingAnchor, multiplier: 30),
-            logoImage.widthAnchor.constraint(equalToConstant: 100),
+            logoImage.leadingAnchor.constraint(equalToSystemSpacingAfter: leadingAnchor, multiplier: 32),
+            logoImage.widthAnchor.constraint(equalToConstant: 80),
             logoImage.heightAnchor.constraint(equalToConstant: 80)
         ])
     }

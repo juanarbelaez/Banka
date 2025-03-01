@@ -44,6 +44,7 @@ extension LoginViewController {
         
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.text = "BanKa"
+//        titleLabel.textColor = appColor
         titleLabel.font = UIFont.boldSystemFont(ofSize: 40)
         titleLabel.textAlignment = .left
         
@@ -57,14 +58,17 @@ extension LoginViewController {
         resetPasswordButton.translatesAutoresizingMaskIntoConstraints = false
         resetPasswordButton.configuration = .borderless()
         resetPasswordButton.setTitle("Olvidó la contraseña?", for: [])
-        resetPasswordButton.titleLabel?.font = UIFont.systemFont(ofSize: 3)
         resetPasswordButton.configuration?.buttonSize = .mini
+        resetPasswordButton.tintColor = .lightGray
+
         resetPasswordButton.addTarget(self, action: #selector(resetPasswordTapped), for: .primaryActionTriggered)
         
         signInButton.translatesAutoresizingMaskIntoConstraints = false
         signInButton.configuration = .filled()
         signInButton.setTitle("Iniciar sesión", for: [])
         signInButton.configuration?.imagePadding = 8
+        signInButton.tintColor = appColor
+        signInButton.setTitleColor(.black, for: .normal)
         signInButton.addTarget(self, action: #selector(signinTapped), for: .primaryActionTriggered)
         
         errorLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -151,7 +155,7 @@ extension LoginViewController {
             return
         }
         
-        if username == "Juan" && password == "1234" {
+        if username == "123" && password == "123" {
             errorLabel.isHidden = true
             delegate?.didLogin()
         } else {
