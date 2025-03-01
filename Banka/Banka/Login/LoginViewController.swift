@@ -8,6 +8,10 @@
 import Foundation
 import UIKit
 
+protocol LogoutDelegate: Any {
+    func didLogout()
+}
+
 protocol LoginViewControllerDelegate: AnyObject {
     func didLogin()
 }
@@ -36,6 +40,13 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         style()
         layout()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        loginView.passwordTextField.text = ""
+        loginView.usernameTextField.text = ""
     }
 }
 

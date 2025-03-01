@@ -10,6 +10,7 @@ import UIKit
 
 class DetalleProductoViewController: UIViewController {
     
+//
     
     var tableView = UITableView()
     let headerView = HeaderViewProducto()
@@ -56,6 +57,8 @@ extension DetalleProductoViewController {
         
         tableView.tableHeaderView = headerView
     }
+    
+   
 }
 
 extension DetalleProductoViewController: UITableViewDelegate {
@@ -85,7 +88,4 @@ extension DetalleProductoViewController: UITableViewDataSource {
        
         return "Movimientos"
     }
-    
-    
-    
 }

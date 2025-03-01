@@ -17,7 +17,7 @@ class ResumenViewController: UIViewController {
     ]
     
     lazy var logoutBarButtonItem: UIBarButtonItem = {
-        let barButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(logoutTapped))
+        let barButtonItem = UIBarButtonItem(title: "Cerrar sesión", style: .plain, target: self, action: #selector(logoutTapped))
         barButtonItem.tintColor = .label
         return barButtonItem
     }()
@@ -97,6 +97,7 @@ extension ResumenViewController: UITableViewDataSource {
 //MARK: - Actions
 extension ResumenViewController {
     @objc func logoutTapped(sender: UIButton) {
-        // TODO: Cierre sesión
+        
+        NotificationCenter.default.post(name: .logout, object: nil)
     }
 }
