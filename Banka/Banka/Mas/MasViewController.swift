@@ -24,6 +24,12 @@ class MasViewController: UIViewController {
     let usuarioLabel = UILabel()
     let infoSesion = UILabel()
     
+    lazy var logoutBarButtonItem: UIBarButtonItem = {
+        let barButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(logoutTapped))
+        barButtonItem.tintColor = .label
+        return barButtonItem
+    }()
+    
     let serviciosCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
 
@@ -42,10 +48,12 @@ class MasViewController: UIViewController {
         
         style()
         layout()
+        setupNavigationBar()
     }
 }
 
 extension MasViewController {
+    
     func style(){
         
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -76,6 +84,7 @@ extension MasViewController {
         serviciosCollectionView.register(ServicioCell.self, forCellWithReuseIdentifier: ServicioCell.reuseId)
         
     }
+    
     func layout(){
         
         infoUsuarioView.addSubview(usuarioLabel)
@@ -111,6 +120,11 @@ extension MasViewController {
             serviciosCollectionView.heightAnchor.constraint(equalToConstant: 400)
         ])
     }
+    
+    private func setupNavigationBar() {
+        
+        navigationItem.rightBarButtonItem = logoutBarButtonItem
+    }
 }
     
 extension MasViewController: UICollectionViewDataSource {
@@ -128,5 +142,13 @@ extension MasViewController: UICollectionViewDataSource {
 extension MasViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: (collectionView.bounds.size.width / 3.0) - 16.0 , height: 80)
+    }
+}
+
+//MARK: - Actions
+
+extension MasViewController {
+    @objc func logoutTapped (sender: UIButton) {
+        print("logoutTapped")
     }
 }
